@@ -1,22 +1,48 @@
-let displayName = "hadi arbabi";
-let inventoryType = "tv";
-let trackingNumber = "123123hj";
-let createDate = new Date();
+let displayName: string = "Jess's standing desk";
+let inventoryType: string = "furniture";
+let trackingNumber: string = "FD123455";
+let createDate: Date = new Date();
 
-interface Item {
-  displayName: string;
-  inventoryType: string;
-  trackingNumber: string;
-  createDate: Date;
+type Cost = string | number;
+
+let originalCost: Cost;
+
+if (typeof originalCost === "number") {
+  let cost: number = originalCost;
+} else {
+  let x = originalCost;
 }
 
-function getInventoryItem(trackingNumber: string): Item {}
-const getProduct = (trackingNumber: string): Item => ();
+enum inventoryItemType {
+  Computer = "Computer",
+  Forniture = "Forniture",
+}
 
-// function saveInventoryItem((item: item) => void) {}
+interface InventoryItem {
+  displayName: string;
+  inventoryType: "Forniture" | "Computer";
+  readonly trackingNumber: string;
+  createDate: Date;
+  originalCost?: number;
 
-// const inventoryItem = getInventoryItem(trackingNumber);
+  addNote?: (note: string) => string;
+}
 
-// inventoryItem.createDate = new Date();
+function getInventoryItem(trackingNumber: string): InventoryItem {
+  return null;
+}
 
-// saveInventoryItem(inventoryItem);
+function saveInventoryItem(item: InventoryItem) {}
+
+let inventoryItem = getInventoryItem(trackingNumber);
+
+let updatedInventoryItem = inventoryItem;
+
+inventoryItem.createDate = new Date();
+
+saveInventoryItem({
+  displayName: "MacBook Pro 15 Retina",
+  inventoryType: "Computer",
+  trackingNumber: "MBP123456",
+  createDate: new Date(),
+});

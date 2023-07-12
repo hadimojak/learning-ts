@@ -1,10 +1,29 @@
-var displayName = "hadi arbabi";
-var inventoryType = "tv";
-var trackingNumber = "123123hj";
+var displayName = "Jess's standing desk";
+var inventoryType = "furniture";
+var trackingNumber = "FD123455";
 var createDate = new Date();
-function getInventoryItem(trackingNumber) { }
-var getProduct = function (trackingNumber) { return (); };
-// function saveInventoryItem((item: item) => void) {}
-// const inventoryItem = getInventoryItem(trackingNumber);
-// inventoryItem.createDate = new Date();
-// saveInventoryItem(inventoryItem);
+var originalCost;
+if (typeof originalCost === "number") {
+    var cost = originalCost;
+}
+else {
+    var x = originalCost;
+}
+var inventoryItemType;
+(function (inventoryItemType) {
+    inventoryItemType["Computer"] = "Computer";
+    inventoryItemType["Forniture"] = "Forniture";
+})(inventoryItemType || (inventoryItemType = {}));
+function getInventoryItem(trackingNumber) {
+    return null;
+}
+function saveInventoryItem(item) { }
+var inventoryItem = getInventoryItem(trackingNumber);
+var updatedInventoryItem = inventoryItem;
+inventoryItem.createDate = new Date();
+saveInventoryItem({
+    displayName: "MacBook Pro 15 Retina",
+    inventoryType: "Computer",
+    trackingNumber: "MBP123456",
+    createDate: new Date(),
+});
